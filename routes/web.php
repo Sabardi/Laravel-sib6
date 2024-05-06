@@ -19,3 +19,8 @@ Route::get('/staf/{nama}/{devisi}', function ($nama, $devisi) {
 Route::get('/tesakses', function () {
     return view('hello');
 });
+
+// mengakses file yg ada di dalam folder
+route::get('/nilai', function(){
+    return view('nilai.daftarnilai');
+});
