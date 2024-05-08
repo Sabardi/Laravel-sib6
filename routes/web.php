@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // route mengembalikan nilai ke routes
 Route::get('/percobaan', function () {
     return 'selamat pagi semua';
@@ -27,4 +23,8 @@ route::get('/nilai', function(){
 
 route::get('/Dashboard', function(){
     return view('admin.dashboard');
+});
+
+route::get('/', function(){
+    return view('front.home');
 });
