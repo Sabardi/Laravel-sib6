@@ -24,3 +24,7 @@ Route::get('/tesakses', function () {
 route::get('/nilai', function(){
     return view('nilai.daftarnilai');
 });
+
+route::get('/Dashboard', function(){
+    return view('admin.dashboard');
+});
