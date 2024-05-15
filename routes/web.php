@@ -26,9 +26,9 @@ route::get('/Dashboard', function(){
     return view('admin.dashboard');
 });
 
-route::get('/', function(){
-    return view('front.home');
-});
+// route::get('/', function(){
+//     return view('admin2.index');
+// });
 
 
 // mengakses file yg ada di dalam folder
@@ -36,4 +36,5 @@ route::get('/', function(){
 Route::prefix('admin')->group(function(){
     Route::get('jenis', [JenisProdukController::class, 'index']);
 });
+Route::get('/', [JenisProdukController::class, 'index']);
 

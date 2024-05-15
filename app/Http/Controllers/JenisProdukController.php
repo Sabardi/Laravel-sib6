@@ -17,7 +17,7 @@ class JenisProdukController extends Controller
     {
         // variable ini mendeklarasikan table yang di ambil dari mode
         $jenis = DB::table('jenis_produk')->get();
-        return view('admin.jenis.index', compact('jenis'));
+        return view('admin2.index', compact('jenis'));
     }
 
     /**
