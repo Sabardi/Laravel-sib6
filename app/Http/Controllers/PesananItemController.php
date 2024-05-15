@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\JenisPoroduk;
+use App\Models\PesananItem;
+use App\Models\Pesanan;
 use App\Models\Produk;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
-class ProdukController extends Controller
+class PesananItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,12 @@ class ProdukController extends Controller
     public function index()
     {
         //
-        $produk = Produk::join('jenis_produk', 'jenis_produk_id','=', 'jenis_produk.id')
-        ->select('produk.*', 'jenis_produk.nama AS jenis')
+        $pesananitem = PesananItem::join('produk', 'produk_id','=', 'produk.id')
+        ->join('pesanan', 'pesanan_id', '=', 'pesanan.id')
+        // ->select('pesanan_items.*', 'jenis_produk.nama AS jenis')
+        // ->select('produk.*', 'produk.nama AS jenis')
         ->get();
-
-        return view('admin2.produk.index', compact('produk'));
+        return view('admin2.pesanan_item.index', compact('pesananitem'));
     }
 
     /**
@@ -41,7 +42,7 @@ class ProdukController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(PesananItem $pesananItem)
     {
         //
     }
@@ -49,7 +50,7 @@ class ProdukController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(PesananItem $pesananItem)
     {
         //
     }
@@ -57,7 +58,7 @@ class ProdukController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, PesananItem $pesananItem)
     {
         //
     }
@@ -65,7 +66,7 @@ class ProdukController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(PesananItem $pesananItem)
     {
         //
     }

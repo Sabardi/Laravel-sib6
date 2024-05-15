@@ -15,38 +15,32 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Kode</th>
-                            <th>Nama</th>
-                            <th>Harga Beli</th>
-                            <th>Harga jual</th>
+                            <th>Tanggal</th>
+                            <th>total</th>
+                            <th>nama</th>
+                            <th>harga_beli</th>
                             <th>Stok</th>
-                            <th>Minimal stok</th>
-                            <th>Jenis produk</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Kode</th>
-                            <th>Nama</th>
-                            <th>Harga Beli</th>
-                            <th>Harga jual</th>
+                            <th>Tanggal</th>
+                            <th>total</th>
+                            <th>nama</th>
+                            <th>harga_beli</th>
                             <th>Stok</th>
-                            <th>Minimal stok</th>
-                            <th>Jenis produk</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        @foreach ( $produk as $produk)
+                        @foreach ( $pesananitem as $pesanan)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$produk->kode}}</td>
-                                <td>{{$produk->nama}}</td>
-                                <td>{{$produk->harga_beli}}</td>
-                                <td>{{$produk->harga_jual}}</td>
-                                <td>{{$produk->stok}}</td>
-                                <td>{{$produk->min_stok}}</td>
-                                <td>{{$produk->jenis}}</td>
+                                <td>{{$pesanan->tanggal}}</td>
+                                <td>{{$pesanan->total}}</td>
+                                <td>{{$pesanan->jenis}}</td>
+                                <td>{{$pesanan->harga_beli}}</td>
+                                <td>{{$pesanan->stok}}</td>
                             </tr>
                         @endforeach
                     </tbody>

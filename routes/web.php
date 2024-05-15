@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\JenisProdukController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\PesananItemController;
 // route mengembalikan nilai ke routes
 // Route::get('/percobaan', function () {
 //     return 'selamat pagi semua';
@@ -37,5 +38,6 @@ use App\Http\Controllers\ProdukController;
 Route::prefix('admin')->group(function(){
     Route::get('/jenis', [JenisProdukController::class, 'index']);
     Route::resource('/produk', ProdukController::class);
+    Route::resource('/pesanan', PesananItemController::class);
 });
 
