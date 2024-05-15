@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\JenisProdukController;
 // route mengembalikan nilai ke routes
 Route::get('/percobaan', function () {
     return 'selamat pagi semua';
@@ -28,3 +29,11 @@ route::get('/Dashboard', function(){
 route::get('/', function(){
     return view('front.home');
 });
+
+
+// mengakses file yg ada di dalam folder
+
+Route::prefix('admin')->group(function(){
+    Route::get('jenis', [JenisProdukController::class, 'index']);
+});
+

@@ -22,3 +22,7 @@ hasmany satu ke banya
  (sebagai penanda)
  belongs to (kedua tabel itu saling terhubung )
  atau one to many dan many to one
+
+
+# membuatkan controller
+php artisan make:controller JenisProdukControl
