@@ -9,7 +9,7 @@ class JenisPoroduk extends Model
 {
     use HasFactory;
     // pemanggilan nama tabel yg digunakan
-    protected $table = 'jenis_poroduk';
+    protected $table = 'jenis_produk';
 
     // panggilan kolom yang ada di tabel (sesuai dengan ada di database)
     protected $fillable = ['nama'];

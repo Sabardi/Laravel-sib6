@@ -4,20 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\JenisPoroduk;
-
-// digunakan jika menggunakan query builder
+use App\Models\Produk;
 use Illuminate\Support\Facades\DB;
 
-class JenisProdukController extends Controller
+class ProdukController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        // variable ini mendeklarasikan table yang di ambil dari mode
-        $jenis = DB::table('jenis_produk')->get();
-        return view('admin2.jenis.index', compact('jenis'));
+        //
+        $produk = Produk::join('jenis_produk', 'jenis_produk_id ','=', 'jenis_produk.id')
+        ->select('produk.*', 'jenis_produk.nama AS jenis')
+        ->get();
+
+        return view('admin2.produk.index', compact('produk'));
     }
 
     /**
