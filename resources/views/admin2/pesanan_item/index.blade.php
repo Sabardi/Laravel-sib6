@@ -15,32 +15,29 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Tanggal</th>
-                            <th>total</th>
                             <th>nama</th>
-                            <th>harga_beli</th>
-                            <th>Stok</th>
+                            <th>total</th>
+                            <th>jumlah</th>
+                            <th>Harga</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Tanggal</th>
-                            <th>total</th>
                             <th>nama</th>
-                            <th>harga_beli</th>
-                            <th>Stok</th>
+                            <th>total</th>
+                            <th>jumlah</th>
+                            <th>Harga</th>
                         </tr>
                     </tfoot>
                     <tbody>
                         @foreach ( $pesananitem as $pesanan)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$pesanan->tanggal}}</td>
+                                <td>{{$pesanan->nama}}</td>
                                 <td>{{$pesanan->total}}</td>
-                                <td>{{$pesanan->jenis}}</td>
-                                <td>{{$pesanan->harga_beli}}</td>
-                                <td>{{$pesanan->stok}}</td>
+                                <td>{{$pesanan->qty}}</td>
+                                <td>{{$pesanan->harga}}</td>
                             </tr>
                         @endforeach
                     </tbody>

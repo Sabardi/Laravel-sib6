@@ -17,9 +17,7 @@ class PesananItemController extends Controller
         //
         $pesananitem = PesananItem::join('produk', 'produk_id','=', 'produk.id')
         ->join('pesanan', 'pesanan_id', '=', 'pesanan.id')
-        // ->select('pesanan_items.*', 'jenis_produk.nama AS jenis')
-        // ->select('produk.*', 'produk.nama AS jenis')
-        ->get();
+        ->select('pesanan_items.*', 'produk.nama AS nama', 'pesanan.total AS total')->get();
         return view('admin2.pesanan_item.index', compact('pesananitem'));
     }
 
