@@ -15,3 +15,10 @@ php artisan make:factory StaffFactory
 untuk kelas yang specific
 php artisan db:seed --class=StaffSeeder
 
+
+
+hasmany dan belong to
+hasmany satu ke banya 
+ (sebagai penanda)
+ belongs to (kedua tabel itu saling terhubung )
+ atau one to many dan many to one
