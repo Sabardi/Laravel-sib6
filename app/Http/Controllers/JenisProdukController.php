@@ -26,6 +26,8 @@ class JenisProdukController extends Controller
     public function create()
     {
         //
+        $jenis_produk = DB::table('jenis_produk')->get();
+        return view('admin2.jenis.create', compact('jenis_produk'));
     }
 
     /**
@@ -33,7 +35,10 @@ class JenisProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('jenis_produk')->insert([
+            'nama' => $request->nama,
+        ]);
+        return redirect('admin/jenis');
     }
 
     /**
