@@ -26,3 +26,10 @@ hasmany satu ke banya
 
 # membuatkan controller
 php artisan make:controller JenisProdukControl
+
+
+
+
+## referensi 
+hamany dan belongsto
+https://chat.openai.com/share/841d89ed-cfa5-4875-b5c7-b82042d053f3
