@@ -57,7 +57,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{url('admin/jenis')}}">Jenis Produk</a>
                                     <a class="nav-link" href="{{url('admin/produk')}}">Produk</a>
-                                    <a class="nav-link" href="{{route('kartu.index')}}">Kartu</a>
+                                    <a class="nav-link" href="{{url('admin/kartu')}}">Kartu</a>
                                     <a class="nav-link" href="{{route('pelanggan.index')}}">Pelanggan</a>
                                 </nav>
                             </div>

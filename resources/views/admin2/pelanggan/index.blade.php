@@ -27,13 +27,13 @@
     <div class="container-fluid px-4">
         <h1 class="mt-4">Dashboard</h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active">Dashboard</li>
+            <li class="breadcrumb-item active">Pelanggan</li>
         </ol>
         <div class="card mb-4">
             <div class="card-header">
                 <!-- Button trigger modal -->
 
-                <a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a href="{{ route('pelanggan.create') }}" class="btn btn-primary">
                     <i class="fa-solid fa-square-plus"></i>
                 </a>
             </div>

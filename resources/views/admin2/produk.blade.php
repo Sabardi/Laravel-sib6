@@ -22,14 +22,26 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
+                            <th>Kode</th>
                             <th>Nama</th>
+                            <th>Harga Beli</th>
+                            <th>Harga Jual</th>
+                            <th>Stok</th>
+                            <th>Minimal Stok</th>
+                            <th>Jenis Produk</th>
                         </tr>
                     </tfoot>
                     <tbody>
                         @foreach ( $jenis as $jenis)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$jenis->nama}}</td>
+                                <<td>{{$p->kode}}</td>
+                                <td>{{$p->nama}}</td>
+                                <td>{{$p->harga_beli}}</td>
+                                <td>{{$p->harga_jual}}</td>
+                                <td>{{$p->stok}}</td>
+                                <td>{{$p->min_stok}}</td>
+                                <td>{{$p->jenis}}</td>
                             </tr>
                         @endforeach
                     </tbody>

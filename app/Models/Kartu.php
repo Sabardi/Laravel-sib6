@@ -16,6 +16,8 @@ class Kartu extends Model
         'iuran'
     ];
 
+    public $timestamps = false;
+
     public function pelanggan(){
         return $this->hasMany(Pelanggan::class);
     }

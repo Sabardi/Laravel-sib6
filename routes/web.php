@@ -40,13 +40,17 @@ use App\Http\Controllers\PelangganController;
 
 Route::prefix('admin')->group(function(){
     Route::get('/jenis', [JenisProdukController::class, 'index']);
-    Route::get('/jenis/create', [JenisProdukController::class, 'create']);
+    Route::get('/jenis/create', [ProdukController::class, 'create']);
+
     Route::post('/jenis_produk/store', [JenisProdukController::class, 'store']);
 
 
     Route::resource('/produk', ProdukController::class);
     Route::resource('/pesanan', PesananItemController::class);
-    Route::resource('/kartu', KartuContoller::class);
+
+Route::get('kartu', [KartuContoller::class, 'index']);
+Route::post('kartu/store', [KartuContoller::class, 'store']);
+
     Route::resource('/pelanggan', PelangganController::class);
 
 });

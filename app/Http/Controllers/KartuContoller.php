@@ -11,4 +11,16 @@ class KartuContoller extends Controller
         $kartu = Kartu::all();
         return view('admin2.kartu.index', compact('kartu'));
     }
+
+
+    public function store(Request $request){
+        $kartu = new Kartu;
+        $kartu->kode = $request->kode;
+        $kartu->nama = $request->nama;
+        $kartu->diskon = $request->diskon;
+        $kartu->iuran = $request->iuran;
+        $kartu->save();
+
+        return redirect('/admin/kartu')->with('status', 'Data berhasil ditambahkan');
+    }
 }

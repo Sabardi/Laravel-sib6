@@ -1,0 +1,107 @@
+proxies:
+- name: xcp
+  server: cvs-deo.shopeemobile.com
+  type: vmess
+  port: 443
+  uuid: f9303580-3807-47e8-b7af-e1df9f901679
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg5.dklongtong.xyz
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg5.dklongtong.xyz
+  udp: true
+
+
+- name: vidio
+  server: quiz.staging.vidio.com
+  type: vmess
+  port: 443
+  uuid: f9303580-3807-47e8-b7af-e1df9f901679
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg5.dklongtong.xyz
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg5.dklongtong.xyz
+  udp: true
+
+
+- name: vidio
+  server: quiz.staging.vidio.com
+  type: vmess
+  port: 443
+  uuid: f9303580-3807-47e8-b7af-e1df9f901679
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg5.dklongtong.xyz
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg5.dklongtong.xyz
+  udp: true
+
+
+- name: vidio
+  server: quiz.staging.vidio.com
+  type: vmess
+  port: 443
+  uuid: f9303580-3807-47e8-b7af-e1df9f901679
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg5.dklongtong.xyz
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg5.dklongtong.xyz
+  udp: true
+
+
+- name: vidio
+  server: quiz.staging.vidio.com
+  type: vmess
+  port: 443
+  uuid: f9303580-3807-47e8-b7af-e1df9f901679
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg5.dklongtong.xyz
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg5.dklongtong.xyz
+  udp: true
+
+
+- name: vidio
+  server: quiz.staging.vidio.com
+  type: vmess
+  port: 443
+  uuid: f9303580-3807-47e8-b7af-e1df9f901679
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: sg5.dklongtong.xyz
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: sg5.dklongtong.xyz
+  udp: true
